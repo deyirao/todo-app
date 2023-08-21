@@ -1,38 +1,111 @@
-.App {
+body {
+  background-color: #17181f;
+  color: #ddd;
+}
+
+h1, h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  max-width: 300px;
+  margin: 20px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  border: 3px solid #30313d;
+  border-radius: 10px;
+  padding: 5px;
   display: flex;
-  flex-direction: column;
+}
+
+form input[type="text"] {
+  background: none;
+  color: #fff;
+  border: 0;
+  padding: 0 8px;
+  display: block;
+  width: 100%;
+}
+
+form button {
+  background-color: #61dafb;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+div.task {
+  background-color: #20212d;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: opacity .2s linear;
 }
 
-.App-link {
-  color: #61dafb;
+div.task svg {
+  height: 20px;
+  margin-right: 10px;
+  fill: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.checkbox-checked {
+  display: flex;
+  align-items: center;
+}
+
+div.checkbox-unchecked {
+  display: flex;
+  align-items: center;
+}
+
+div.task.done {
+  opacity: 0.3;
+}
+
+div.task span {
+  position: relative;
+}
+
+div.task-name, div.task form {
+  flex-grow: 1;
+}
+
+div.task span:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ddd;
+  position: absolute;
+  top: 12px;
+  transition: width .1s linear;
+}
+
+div.task.done span:before {
+  width: 100%;
+}
+
+button.trash {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+button.trash svg {
+  fill: #888;
+  height: 14px;
+}
+
+div.task input {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
 }
