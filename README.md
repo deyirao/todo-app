@@ -4,6 +4,7 @@ Click here to use the application: https://deyirao.github.io/todo-app/
 
 ### Application Information
 * Built using the framework `React`.
+* It uses the local storage as database.
 * The UI is written in german.
 * It is a simple and minimalistic program.
 
