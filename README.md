@@ -1,5 +1,4 @@
 # todo-app
-An application to organize stuff that still has to be done.  
 Click here to use the application: https://deyirao.github.io/todo-app/
 
 ### Application Information
